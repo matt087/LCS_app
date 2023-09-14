@@ -34,16 +34,16 @@ public class View_main extends JFrame {
 	public JTextField txt_mid_e;
 	public JTextField txt_adc_e;
 	public JTextField txt_supp_e;
-	public JToggleButton btn_adc;
-	public JToggleButton btn_supp;
-	public JToggleButton btn_mid;
-	public JToggleButton btn_jungle;
-	public JToggleButton btn_TOP;
-	public JToggleButton btn_TOP_e;
-	public JToggleButton btn_jungle_e;
-	public JToggleButton btn_mid_e;
-	public JToggleButton btn_adc_e;
-	public JToggleButton btn_supp_e;
+	public JButton btn_adc;
+	public JButton btn_supp;
+	public JButton btn_mid;
+	public JButton btn_jungle;
+	public JButton btn_TOP;
+	public JButton btn_TOP_e;
+	public JButton btn_jungle_e;
+	public JButton btn_mid_e;
+	public JButton btn_adc_e;
+	public JButton btn_supp_e;
 	public JButton btn_counter;
 	public JButton btn_compo_aux;
 	public JButton btn_insert;
@@ -92,7 +92,7 @@ public class View_main extends JFrame {
 		lblNewLabel.setBounds(57, 68, 91, 25);
 		panel.add(lblNewLabel);
 		
-		btn_TOP = new JToggleButton("Top");
+		btn_TOP = new JButton("Top");
 		btn_TOP.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_TOP.setBounds(30, 140, 91, 23);
 		panel.add(btn_TOP);
@@ -110,96 +110,106 @@ public class View_main extends JFrame {
 		panel.add(lblEnemyTeam);
 		
 		txt_top = new JTextField();
+		txt_top.setEditable(false);
 		txt_top.setBounds(131, 140, 152, 23);
 		panel.add(txt_top);
 		txt_top.setColumns(10);
 		
-		btn_jungle = new JToggleButton("Jungle");
+		btn_jungle = new JButton("Jungle");
 		btn_jungle.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_jungle.setBounds(30, 185, 91, 23);
 		panel.add(btn_jungle);
 		
 		txt_jungle = new JTextField();
+		txt_jungle.setEditable(false);
 		txt_jungle.setColumns(10);
 		txt_jungle.setBounds(131, 185, 152, 23);
 		panel.add(txt_jungle);
 		
-		btn_mid = new JToggleButton("Mid");
+		btn_mid = new JButton("Mid");
 		btn_mid.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_mid.setBounds(30, 230, 91, 23);
 		panel.add(btn_mid);
 		
 		txt_mid = new JTextField();
+		txt_mid.setEditable(false);
 		txt_mid.setColumns(10);
 		txt_mid.setBounds(131, 230, 152, 23);
 		panel.add(txt_mid);
 		
-		btn_adc = new JToggleButton("Adc");
+		btn_adc = new JButton("Adc");
 		btn_adc.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_adc.setBounds(30, 275, 91, 23);
 		panel.add(btn_adc);
 		
 		txt_adc = new JTextField();
+		txt_adc.setEditable(false);
 		txt_adc.setColumns(10);
 		txt_adc.setBounds(131, 275, 152, 23);
 		panel.add(txt_adc);
 		
-		btn_supp = new JToggleButton("Supp");
+		btn_supp = new JButton("Supp");
 		btn_supp.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_supp.setBounds(30, 324, 91, 23);
 		panel.add(btn_supp);
 		
 		txt_supp = new JTextField();
+		txt_supp.setEditable(false);
 		txt_supp.setColumns(10);
 		txt_supp.setBounds(131, 324, 152, 23);
 		panel.add(txt_supp);
 		
-		btn_TOP_e = new JToggleButton("Top");
+		btn_TOP_e = new JButton("Top");
 		btn_TOP_e.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_TOP_e.setBounds(372, 140, 91, 23);
 		panel.add(btn_TOP_e);
 		
 		txt_top_e = new JTextField();
+		txt_top_e.setEditable(false);
 		txt_top_e.setColumns(10);
 		txt_top_e.setBounds(473, 140, 152, 23);
 		panel.add(txt_top_e);
 		
-		btn_jungle_e = new JToggleButton("Jungle");
+		btn_jungle_e = new JButton("Jungle");
 		btn_jungle_e.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_jungle_e.setBounds(372, 185, 91, 23);
 		panel.add(btn_jungle_e);
 		
 		txt_jungle_e = new JTextField();
+		txt_jungle_e.setEditable(false);
 		txt_jungle_e.setColumns(10);
 		txt_jungle_e.setBounds(473, 185, 152, 23);
 		panel.add(txt_jungle_e);
 		
-		btn_mid_e = new JToggleButton("Mid");
+		btn_mid_e = new JButton("Mid");
 		btn_mid_e.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_mid_e.setBounds(372, 230, 91, 23);
 		panel.add(btn_mid_e);
 		
 		txt_mid_e = new JTextField();
+		txt_mid_e.setEditable(false);
 		txt_mid_e.setColumns(10);
 		txt_mid_e.setBounds(473, 230, 152, 23);
 		panel.add(txt_mid_e);
 		
-		btn_adc_e = new JToggleButton("Adc");
+		btn_adc_e = new JButton("Adc");
 		btn_adc_e.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_adc_e.setBounds(372, 275, 91, 23);
 		panel.add(btn_adc_e);
 		
 		txt_adc_e = new JTextField();
+		txt_adc_e.setEditable(false);
 		txt_adc_e.setColumns(10);
 		txt_adc_e.setBounds(473, 275, 152, 23);
 		panel.add(txt_adc_e);
 		
-		btn_supp_e = new JToggleButton("Supp");
+		btn_supp_e = new JButton("Supp");
 		btn_supp_e.setFont(new Font("Segoe UI Light", Font.PLAIN, 14));
 		btn_supp_e.setBounds(372, 324, 91, 23);
 		panel.add(btn_supp_e);
 		
 		txt_supp_e = new JTextField();
+		txt_supp_e.setEditable(false);
 		txt_supp_e.setColumns(10);
 		txt_supp_e.setBounds(473, 324, 152, 23);
 		panel.add(txt_supp_e);
