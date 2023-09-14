@@ -1,15 +1,23 @@
 package model;
-
 import java.util.ArrayList;
 
 public class Champion 
 {
-	protected String name;
-	protected String role;
-	protected String damage_type;
-	protected String strong_phase1;
-	protected String strong_phase2;
-	protected ArrayList<Champion> counters;
+	private String name;
+	private String role;
+	private String damage_type;
+	private String strong_phase1;
+	private String strong_phase2;
+	private ArrayList<Champion> counters;
+	
+	public Champion(String name, String role, String damage, String stp, String stp2)
+	{
+		this.name=name;
+		this.role=role;
+		this.damage_type=damage;
+		this.strong_phase1=stp;
+		this.strong_phase2=stp2;
+	}
 	
 	public String getName() 
 	{
@@ -58,6 +66,4 @@ public class Champion
 	{
 		this.counters = counters;
 	}
-	
-	
 }
