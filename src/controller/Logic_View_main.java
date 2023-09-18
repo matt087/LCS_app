@@ -1,6 +1,10 @@
 package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 import view.View_main;
 
 public class Logic_View_main implements ActionListener{
@@ -29,6 +33,7 @@ public class Logic_View_main implements ActionListener{
 		setButtonsF();
 		setButtonsF_e();
 		vm.cmb_champion.setEnabled(false);
+		vm.panel_1.setVisible(false);
 	}
 
 	private void setButtonsF()
@@ -161,6 +166,8 @@ public class Logic_View_main implements ActionListener{
 			if(option.equals("Counter"))
 			{
 				setButtonsF();
+				Thread_info_champions t = new Thread_info_champions(selected_champ, this.vm);
+				t.start();
 			}
 			vm.cmb_champion.setSelectedIndex(0);
 		}

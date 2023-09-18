@@ -47,6 +47,8 @@ public class View_main extends JFrame {
 	public JButton btn_counter;
 	public JButton btn_compo_aux;
 	public JButton btn_insert;
+	public JLabel lbl_champ;
+	public JPanel panel_1;
 
 	/**
 	 * Launch the application.
@@ -69,7 +71,7 @@ public class View_main extends JFrame {
 	 */
 	public View_main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(400, 0, 700, 700);
+		setBounds(400, 0, 700, 710);
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -232,6 +234,27 @@ public class View_main extends JFrame {
 		btn_insert.setFont(new Font("Segoe UI Black", Font.BOLD, 14));
 		btn_insert.setBounds(425, 19, 197, 23);
 		panel.add(btn_insert);
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(10, 358, 664, 303);
+		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblChampion = new JLabel("Champion");
+		lblChampion.setHorizontalAlignment(SwingConstants.CENTER);
+		lblChampion.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
+		lblChampion.setBounds(10, 11, 253, 25);
+		panel_1.add(lblChampion);
+		
+		JLabel lblCounters = new JLabel("Counters");
+		lblCounters.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCounters.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
+		lblCounters.setBounds(351, 11, 253, 25);
+		panel_1.add(lblCounters);
+		
+		lbl_champ = new JLabel("");
+		lbl_champ.setBounds(74, 44, 120, 120);
+		panel_1.add(lbl_champ);
 		lvm = new Logic_View_main(this);
 	}
 }
